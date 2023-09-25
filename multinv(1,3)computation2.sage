@@ -73,7 +73,7 @@ f(z): the rational map given by f(x,y)
 canform(x,y): the canonical bicoavriant f(x,y) of V_3 ox V_1
 
 omega(f,x,y,a,b): Omega_{x,y} f(x,y) of order(a,b) bicovariant f(x,y)
-cgprod(f,g,x,r): the transvectant (f,g)_r w.r.t. the covariant variable x.
+cgprod(f,g,x,r): the transvectant (f,g)_r w.r.t. the covariant variable x
 '''
 
 def f(z):
@@ -153,6 +153,8 @@ covariants are named as
   f104,f012 : generating covariant of V_4,V_2
   iab : invariant, deg a in V_4, deg b in V_2
   cabc : covariant, deg a in V_4, deg b in V_2, deg c in V_1
+
+Remark : the invariants i20,i02,i30,i12,i22,i33 are respectively named i,d,j,a,b,c in West's paper.
 '''
 
 bvars = sum([['b' + str(i) + str(j) for j in range(d+e+1 - 2*i)] for i in range(min(d,e)+1)],[])
@@ -233,6 +235,7 @@ def resx(f,g,x):
 T = QQ[b0,b1,b2,x,t] : algebra to use as values of interpolation
 
 V = QQ[x02,x20,x30,x12,x22,x33] : the algebra represents the invariant algebra I(V4 o+ V2)
+(to use .factor(), we do not introduce the relation)
 '''
 
 
